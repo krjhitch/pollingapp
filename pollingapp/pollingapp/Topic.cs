@@ -6,11 +6,11 @@ namespace pollingapp
 {
     class Topic
     {
-        private string title { get; set; }
+        public string title { get; set; }
         private string summary { get; set; }
         private string description { get; set; }
         private string[] moreInfoLinks { get; set; }
-        private Comment[] userComments { get; set; }
+        public List<Comment> userComments { get; set; }
 
         public Topic(string Title, string Summary, string Description, string[] MoreInfoLinks)
         {
