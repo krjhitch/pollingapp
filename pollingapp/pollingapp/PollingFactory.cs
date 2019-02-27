@@ -13,11 +13,13 @@ namespace pollingapp
         public static User CreateUser(string UserName, string EmailAddress)
         {
             var newUser = new User(UserName, EmailAddress);
+            users.Add(newUser);
             return newUser;
         }
         public static Topic AddTopic(string Title, string Summary, string Description, string[] MoreInfoLinks)
         {
             var newTopic = new Topic(Title, Summary, Description, MoreInfoLinks);
+            topics.Add(newTopic);
             return newTopic;
         }
         public static IEnumerable<User> GetAllUsers()
